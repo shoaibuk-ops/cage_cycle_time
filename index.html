@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Operator Capacity & Cycle Time Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>/ -->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+</head>
+<body>
+
+<h1>Operator Availability & Machine Capacity Study</h1>
+
+<section>
+  <h2>Input Parameters</h2>
+  <div class="grid">
+    <label>Machines <input id="machines" type="number" value="4"></label>
+    <label>Shift hours <input id="shiftHours" type="number" value="8"></label>
+    <label>Days per month <input id="days" type="number" value="27"></label>
+    <label>Components per tray <input id="componentsTray" type="number" value="175"></label>
+    <label>Inspection time / component (sec) <input id="inspection" type="number" value="20"></label>
+    <label>Machine process time / tray (sec) <input id="machineTime" type="number" value="3500"></label>
+    <label>Operator time / tray (sec) <input id="operatorTime" type="number" value="60"></label>
+    <label>Trays per machine / shift <input id="trays" type="number" value="8"></label>
+  </div>
+  <button onclick="recalculate()">Recalculate</button>
+</section>
+
+<section>
+  <h2>Key Results</h2>
+  <div id="results"></div>
+</section>
+
+<section class="dashboard">
+
+  <div class="card-row">
+    <div class="card half">
+      <h2>Production Output</h2>
+      <canvas id="outputChart"></canvas>
+    </div>
+
+    <div class="card half">
+      <h2>Operator Utilization</h2>
+      <canvas id="operatorChart"></canvas>
+    </div>
+  </div>
+
+  <div class="card full">
+    <h2>Operator & Machine Cycle – Full Shift Gantt</h2>
+    <canvas id="ganttChart"></canvas>
+  </div>
+
+</section>
+
+<script src="chart.js"></script>
+
+</body>
+</html>
