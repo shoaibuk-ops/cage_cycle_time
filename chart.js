@@ -122,7 +122,7 @@ const datasets = [];
 
 // Color palette per machine
 const machineColors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'];
-const operatorColors = ['#aec7e8', '#ffbb78', '#98df8a', '#ff9896'];
+const operatorColors = ['#aec7e8', '#aec7e8', '#aec7e8', '#aec7e8'];
 
 // Dynamic initial offsets (visual staggering)
 const baseOffset = 200;
@@ -220,3 +220,4 @@ const operatorChartCanvas = document.getElementById('operatorChart');
 const ganttChartCanvas = document.getElementById('ganttChart');
 
 recalculate();
+
