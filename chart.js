@@ -21,10 +21,10 @@ function recalculate() {
 
   results.innerHTML = `
     <b>Components / Shift:</b> ${componentsShift}<br>
-    <b>Components / Day:</b> ${Math.abs(componentsDay)}<br>
-    <b>Components / Month:</b> ${Math.abs(componentsMonth)}<br><br>
-    <b>Operator Engaged Time / Shift:</b> ${Math.abs(operatorEngaged)} sec<br>
-    <b>Operator Idle Time / Shift:</b> ${Math.abs(operatorIdle)} sec
+    <b>Components / Day:</b> ${parseInt(componentsDay)}<br>
+    <b>Components / Month:</b> ${parseInt(componentsMonth)}<br><br>
+    <b>Operator Engaged Time / Shift:</b> ${parseInt(operatorEngaged)} sec<br>
+    <b>Operator Idle Time / Shift:</b> ${parseInt(operatorIdle)} sec
   `;
 
   // -------- OUTPUT CHART --------
@@ -220,5 +220,6 @@ const operatorChartCanvas = document.getElementById('operatorChart');
 const ganttChartCanvas = document.getElementById('ganttChart');
 
 recalculate();
+
 
 
